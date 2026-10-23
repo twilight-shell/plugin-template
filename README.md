@@ -14,7 +14,7 @@ The repository is the plugin folder. Clone it into the folder the shell looks in
 under the name you want to give the plugin:
 
 ```sh
-git clone git@github.com:twilight-shell/plugin-template.git \
+git clone https://github.com/twilight-shell/plugin-template.git \
     ~/.local/share/twilight-shell/plugins/my-plugin
 ```
 
