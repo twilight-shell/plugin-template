@@ -1,5 +1,7 @@
 # twilight-shell/plugin-template
 
+[![ci](https://github.com/twilight-shell/plugin-template/actions/workflows/ci.yml/badge.svg)](https://github.com/twilight-shell/plugin-template/actions/workflows/ci.yml)
+
 A plugin for the [twilight-shell](https://github.com/twilight-shell) organization's
 shell to start from: a card with a greeting in the bottom-left corner of the
 screen, with settings you can change in the settings window and an IPC call that
@@ -75,6 +77,10 @@ ci/check-settings.sh path/to/your-plugin path/to/core
 Plugins are code that runs with the rights of whoever switches them on, so say what
 yours does in its README. If you share it as a repository, anyone can clone it
 into their plugins folder as above.
+
+## Contributing
+
+Contributions are welcome: see [CONTRIBUTING.md](CONTRIBUTING.md). Agents and the like: [AGENTS.md](AGENTS.md).
 
 ## License
 
