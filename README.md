@@ -22,7 +22,8 @@ Switch it on, in the settings window or in `~/.config/twilight-shell/plugins.tom
 enabled = ["my-plugin"]
 ```
 
-The card appears, `my-plugin.toml` is made in `~/.config/twilight-shell/`, and the
+The card appears, a star appears in the bar that hides and shows it,
+`my-plugin.toml` is made in `~/.config/twilight-shell/`, and the
 settings window has a page called "My plugin".
 
 ```sh
@@ -40,7 +41,8 @@ with these files, and clone that into the plugins folder as above.
    `weather.defaults.toml` and `weather.schema.toml`.
 4. In `Plugin.qml` change the settings file's `name` and the file it points at
    (`ConfigFile`), and the IPC `target`.
-5. Replace what the window shows with your own.
+5. Replace what the window and the bar island show with your own. Take the island
+   out (the `barSlot` and `barWidget` properties) if the plugin doesn't need one.
 
 | File | |
 |---|---|
