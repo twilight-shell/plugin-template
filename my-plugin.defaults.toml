@@ -1,0 +1,8 @@
+# Show the card.
+show = true
+
+# What it says.
+greeting = "Hello from my plugin ✦"
+
+# The size of the text.
+size = 14

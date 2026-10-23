@@ -1,0 +1,8 @@
+# What the shell reads to find the plugin. Change all of it for your own.
+name = "my-plugin"               # what it is switched on by: letters, digits, - and _
+title = "My plugin"
+version = "0.1.0"
+description = "A card with a greeting in a corner of the screen, to start from"
+author = "You"
+entry = "Plugin.qml"             # the file it starts from
+api = 1                          # the version of the plugin interface it was made for

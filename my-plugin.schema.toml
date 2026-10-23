@@ -1,0 +1,25 @@
+# How the settings window shows the plugin: a page of its own, built from this.
+title = "My plugin"
+description = "A card with a greeting in a corner of the screen."
+glyph = "✦"
+order = 200
+
+[[options]]
+key = "show"
+title = "Show the card"
+type = "toggle"
+
+[[options]]
+key = "greeting"
+title = "Greeting"
+description = "What the card says. Enter saves it."
+type = "text"
+
+[[options]]
+key = "size"
+title = "Text size"
+type = "range"
+from = 10
+to = 28
+step = 1
+suffix = "px"
