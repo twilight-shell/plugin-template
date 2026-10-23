@@ -5,8 +5,8 @@ import Quickshell.Wayland
 import Twilight.Core
 
 // The least a plugin does that is worth reading: a card with a greeting in the
-// bottom-left corner, settings you can change in the settings window, and an
-// IPC call that hides and shows it.
+// bottom-left corner, settings you can change in the settings window, an IPC
+// call that hides and shows it, and a star in the bar that does the same.
 //
 //     qs -c shell ipc call my-plugin toggle
 Scope {
@@ -30,6 +30,26 @@ Scope {
     readonly property bool shown: !!config.get("show")
     readonly property string greeting: String(config.get("greeting") ?? "")
     readonly property real size: Number(config.get("size")) || 14
+
+    // An island for the bar: say where, and what it shows. The bar makes the
+    // island, the plugin only fills it.
+    property string barSlot: "right"
+    property Component barWidget: Component {
+        Tap {
+            implicitWidth: 28
+            implicitHeight: 28
+            radius: 14
+            lift: 2
+            fill: root.shown ? Theme.accent : Theme.surfaceHigh
+            onClicked: config.set("show", !root.shown)
+
+            StyledText {
+                anchors.centerIn: parent
+                text: "✦"
+                font.pixelSize: 15
+            }
+        }
+    }
 
     IpcHandler {
         target: "my-plugin"
